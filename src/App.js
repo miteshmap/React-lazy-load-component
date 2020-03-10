@@ -4,11 +4,11 @@ import "./styles.css";
 
 const Loader = () => <div>Loading...</div>;
 
-// This could be a compoenent that take a lot of time to load.
+// This could be a component that takes a lot of time to load.
 const PopupContent = React.lazy(
   () =>
-    new Promise(function(resolve, reject) {
-      setTimeout(function() {
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
         resolve(import("./PopupContent.js"));
       }, 1000);
     })
